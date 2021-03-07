@@ -70,8 +70,10 @@ export class Home extends React.Component {
 	render() {
 		return (
 			<div className="title">
-				<h1>MUSIC PLAYER</h1>
-				<i class="fab fa-spotify"></i>
+				<h1>
+					<i className="fab fa-spotify"></i>8-Bit music player
+				</h1>
+
 				<div className="container ">
 					{this.state.fetchData.map((song, i) => {
 						const songURL = this.domain + song.url;
@@ -96,7 +98,7 @@ export class Home extends React.Component {
 				<div className="audioPlayer ">
 					<i
 						onClick={this.playBefore}
-						className="fas fa-2x mr-4 fa-step-backward"></i>
+						className="fas fa-2x mr-4 fa-step-backward bg-success text-light"></i>
 					<audio controls ref={this.myAudioRef}>
 						<source
 							src={this.state.currentSong}
@@ -105,7 +107,7 @@ export class Home extends React.Component {
 					</audio>
 					<i
 						onClick={this.playNext}
-						className="fas fa-2x ml-4 fa-step-forward primary"></i>
+						className="fas fa-2x ml-4 fa-step-forward bg-success text-light"></i>
 				</div>
 				<div></div>
 			</div>
